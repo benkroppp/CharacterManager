@@ -3,6 +3,10 @@
     --color-2: #1B4242;
     --color-3: #5C8374;
     --color-4: #9EC8B9;
+    --color-5: #FEFAF6;
+    --color-6: #be8849;
+    --color-7: #e49b91;
+    --color-8: #8B322C;
 }
 body{
     background-color: var(--color-1);
@@ -38,4 +42,19 @@ input, select{
     width: 100%;
     text-align:center;
     padding:0.05em;
+}
+a{
+    text-decoration: none;
+}
+.navbar{
+    color:var(--color-6);
+    background-color:var(--color-5);
+    font-size:1.5em;
+}
+.navbar a{
+    color: var(--color-6);
+}
+#delete{
+    color: var(--color-7);
+    background-color:var(--color-8);
 }

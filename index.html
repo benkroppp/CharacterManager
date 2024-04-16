@@ -9,8 +9,12 @@
 </head>
 <body>
     <div>
+    <div class="navbar">
+        <a href="index.html">Create Your Character</a>
+        <a href="charactermanager.html">Manage Your Character</a>
+    </div>
     <div class="header">
-        <h1>Fantasy Character Manager</h1>
+        <h1>Fantasy Character Creator</h1>
     </div>
     <div>
         <form id="creator-form">
@@ -20,7 +24,7 @@
             </div>
             <div class="form-section">
             <label for="class">Class</label>
-            <select name="class">
+            <select name="class" id="class">
                 <option value="barbarian">Barbarian</option>
                 <option value="cleric">Cleric</option>
                 <option value="fighter">Fighter</option>
@@ -29,7 +33,7 @@
             </div>
             <div class="form-section">
                 <label for="race">Race</label>
-                <select name="race">
+                <select name="race" id="race">
                     <option value="changeling">Changeling</option>
                     <option value="dwarf">Dwarf</option>
                     <option value="elf">Elf</option>
@@ -39,7 +43,7 @@
             </div>
             <div class="form-section">
             <label for="alignment">Alignment</label>
-            <select name="alignment">
+            <select name="alignment" id="alignment">
                 <option value="lawfulgood">Lawful Good</option>
                 <option value="lawfulneutral">Lawful Neutral</option>
                 <option value="lawfulevil">Lawful Evil</option>
