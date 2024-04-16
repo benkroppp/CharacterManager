@@ -1,0 +1,41 @@
+:root{
+    --color-1: #092635;
+    --color-2: #1B4242;
+    --color-3: #5C8374;
+    --color-4: #9EC8B9;
+}
+body{
+    background-color: var(--color-1);
+    color:var(--color-4);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    display:flex;
+    margin:0px;
+    align-items: center;
+    justify-content: center;
+    width:99%;
+}
+input, select{
+    background-color:var(--color-4);
+    color:var(--color-1);
+    font-size:1em;
+}
+.form-section{
+    margin: 3em;
+    font-size: 1em;
+    justify-content:space-between;
+    align-items:center;
+}
+#creator-form{
+    background-color:var(--color-2);
+    border-bottom-left-radius: 2em;
+    border-bottom-right-radius: 2em;
+    justify-content:space-between;
+    padding: 0.2em;
+}
+.header{
+    color:var(--color-2);
+    background-color: var(--color-4);
+    width: 100%;
+    text-align:center;
+    padding:0.05em;
+}

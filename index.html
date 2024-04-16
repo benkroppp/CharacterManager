@@ -3,11 +3,59 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Fantasy Character Manager</title>
     <link rel="stylesheet" href="style.css">
     <script src="ui.js" type="module"></script>
 </head>
 <body>
-    
+    <div>
+    <div class="header">
+        <h1>Fantasy Character Manager</h1>
+    </div>
+    <div>
+        <form id="creator-form">
+            <div class="form-section">
+            <label for="name">Character Name</label>
+            <input type="text" id="name" name="name">
+            </div>
+            <div class="form-section">
+            <label for="class">Class</label>
+            <select name="class">
+                <option value="barbarian">Barbarian</option>
+                <option value="cleric">Cleric</option>
+                <option value="fighter">Fighter</option>
+                <option value="warlock">Warlock</option>
+            </select>
+            </div>
+            <div class="form-section">
+                <label for="race">Race</label>
+                <select name="race">
+                    <option value="changeling">Changeling</option>
+                    <option value="dwarf">Dwarf</option>
+                    <option value="elf">Elf</option>
+                    <option value="goblin">Goblin</option>
+                    <option value="human">Human</option>
+                </select>
+            </div>
+            <div class="form-section">
+            <label for="alignment">Alignment</label>
+            <select name="alignment">
+                <option value="lawfulgood">Lawful Good</option>
+                <option value="lawfulneutral">Lawful Neutral</option>
+                <option value="lawfulevil">Lawful Evil</option>
+                <option value="neutralgood">Neutral Good</option>
+                <option value="trueneutral">True Neutral</option>
+                <option value="neutralevil">Neutral Evil</option>
+                <option value="chaoticgood">Chaotic Good</option>
+                <option value="chaoticneutral">Chaotic Neutral</option>
+                <option value="chaoticevil">Chaotic Evil</option>
+            </select>
+            </div>
+            <div class="form-section">
+                <input type="submit" name="submit" value="Save Character" id="submit">
+            </div>
+        </form>
+    </div>
+    </div>
 </body>
 </html>
