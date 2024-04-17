@@ -4,7 +4,7 @@ export const SaveCharacter = async (object) => {
 }
 export const LoadCharacter = async () => {
     const localchar = await localStorage.getItem("character");
-    console.log(localchar);
+    console.log(JSON.parse(localchar));
     return JSON.parse(localchar);
 }
 export const DeleteData = () => {
