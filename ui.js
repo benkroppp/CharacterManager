@@ -24,10 +24,22 @@ if (!managerpage) {
 }
 if (managerpage) {
     const deletechar = document.getElementById("delete");
+    const nameload = document.getElementById("name-load");
+    const classload = document.getElementById("class-load");
+    const raceload = document.getElementById("race-load");
+    const alignmentload = document.getElementById("alignment-load");
+    const char = await LoadCharacter();
+    console.log(char);
+    nameload.textContent = char.name;
+    classload.textContent = char.class;
+    raceload.textContent = char.race;
+    alignmentload.textContent = char.alignment;
+
     deletechar.addEventListener("click", (e) => {
         e.preventDefault();
         DeleteData();
     })
+
 }
 console.log(managerpage);
 LoadCharacter();
