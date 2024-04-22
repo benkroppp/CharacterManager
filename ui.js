@@ -29,11 +29,13 @@ if (managerpage) {
     const raceload = document.getElementById("race-load");
     const alignmentload = document.getElementById("alignment-load");
     const char = await LoadCharacter();
+    if(char){
     console.log(char);
     nameload.textContent = char.name;
     classload.textContent = char.class;
     raceload.textContent = char.race;
     alignmentload.textContent = char.alignment;
+    }
 
     deletechar.addEventListener("click", (e) => {
         e.preventDefault();

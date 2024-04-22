@@ -8,5 +8,5 @@ export const LoadCharacter = async () => {
     return JSON.parse(localchar);
 }
 export const DeleteData = () => {
-    localStorage.DeleteData();
+    localStorage.clear();
 }

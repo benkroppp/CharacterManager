@@ -16,7 +16,7 @@ body{
     margin:0px;
     align-items: center;
     justify-content: center;
-    width:99%;
+    width:100vw;
 }
 input, select{
     background-color:var(--color-4);
@@ -39,7 +39,7 @@ input, select{
 .header{
     color:var(--color-2);
     background-color: var(--color-4);
-    width: 100%;
+    width: 100vw;
     text-align:center;
     padding:0.05em;
 }
@@ -57,4 +57,7 @@ a{
 #delete{
     color: var(--color-7);
     background-color:var(--color-8);
+}
+#managerpage{
+    margin:5em;
 }
