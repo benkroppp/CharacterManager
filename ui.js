@@ -2,7 +2,9 @@
 import { SaveCharacter, LoadCharacter, DeleteData } from "./service.js";
 //element selectors
 const managerpage = document.getElementById("managerpage") !== null;
-if (!managerpage) {
+const index = document.getElementById("index") !== null;
+const tracker = document.getElementById("tracker");
+if (index) {
     const nameElement = document.getElementById("name");
     const classElement = document.getElementById("class");
     const raceElement = document.getElementById("race");
