@@ -10,3 +10,12 @@ export const LoadCharacter = async () => {
 export const DeleteData = () => {
     localStorage.clear();
 }
+export const SaveInitiative = async (initobj) => {
+    const jsoninit = JSON.stringify(initobj);
+    await localStorage.setItem("initiative", jsoninit)
+}
+export const LoadInitiative = async () => {
+    const localinit = await localStorage.getItem("initiative");
+    console.log(JSON.parse(localinit));
+    return JSON.parse(localinit);
+}

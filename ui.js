@@ -45,5 +45,8 @@ if (managerpage) {
     })
 
 }
+if(tracker){
+    
+}
 console.log(managerpage);
 LoadCharacter();
