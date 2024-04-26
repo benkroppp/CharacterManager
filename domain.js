@@ -5,7 +5,7 @@ export const BuildInitObject = (text, number) => {
         name: text,
         init: number
     }
-    //initiativeArray = [...temp].sort((a, b) => parseInt(a.init) - parseInt(b.init));
+    initiativeArray.push(temp);
     return {
         name: text,
         init: number
