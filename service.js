@@ -7,8 +7,8 @@ export const LoadCharacter = async () => {
     console.log(JSON.parse(localchar));
     return JSON.parse(localchar);
 }
-export const DeleteData = () => {
-    localStorage.clear();
+export const DeleteCharData = () => {
+    localStorage.setItem("character", null);
 }
 export const SaveInitiative = async (initobj) => {
     const jsoninit = JSON.stringify(initobj);

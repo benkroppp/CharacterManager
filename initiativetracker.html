@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="ui.js"></script>
+    <script src="ui.js" type="module"></script>
     <title>Document</title>
 </head>
 <body>
@@ -14,12 +14,12 @@
             <a href="charactermanager.html">Manage Your Character</a>|
             <a href="initiativetracker.html">Track Combat Initiative</a>
         </div>
-    <form>
+    <form id="initform">
         <label for="charinput">Character or NPC Name</label>
         <input type="text" id="charinput" name="charinput">
         <br>
         <label for="initiative">Number Rolled in Initiative</label>
-        <input type="number" id="initiative" name="initiative">
+        <input type="number" id="initiative" name="initiative" min="1" max="20" value="1">
         <input type="submit" id="submit" name="submit">
     </form>
     <div id="card-container">
