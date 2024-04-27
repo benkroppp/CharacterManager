@@ -7,6 +7,8 @@
     --color-6: #be8849;
     --color-7: #e49b91;
     --color-8: #8B322C;
+    --color-9: #093510;
+    --color-10: #93b898;
 }
 body{
     background-color: var(--color-1);
@@ -17,6 +19,7 @@ body{
     align-items: center;
     justify-content: center;
     width:100vw;
+    overflow-x: hidden;
 }
 input, select{
     background-color:var(--color-4);
@@ -50,6 +53,8 @@ a{
     color:var(--color-6);
     background-color:var(--color-5);
     font-size:1.5em;
+    justify-content: center;
+    text-align: center;
 }
 .navbar a{
     color: var(--color-6);
@@ -60,4 +65,20 @@ a{
 }
 #managerpage{
     
+}
+.charactercard{
+    xpadding:5em;
+}
+.img{
+    border-color:var(--color-5);
+    border-style: solid;
+    border-width:0.3em;
+    border-radius: 3em;
+}
+.save{
+    color: var(--color-10);
+    background-color: var(--color-9);
+}
+.spacer{
+    margin: 3em;
 }
