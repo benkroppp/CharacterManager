@@ -10,12 +10,17 @@ export const LoadCharacter = async () => {
 export const DeleteCharData = () => {
     localStorage.setItem("character", null);
 }
-export const SaveInitiative = async (initobj) => {
-    const jsoninit = JSON.stringify(initobj);
-    await localStorage.setItem("initiative", jsoninit)
+export const SaveInitiative = async (initarr) => {
+    const jsoninit = JSON.stringify(initarr);
+    console.log(jsoninit);
+    await localStorage.setItem("initiative", jsoninit);
+
 }
 export const LoadInitiative = async () => {
     const localinit = await localStorage.getItem("initiative");
     console.log(JSON.parse(localinit));
     return JSON.parse(localinit);
+}
+export const ClearInitiative = () => {
+    localStorage.setItem("initiative", "");
 }

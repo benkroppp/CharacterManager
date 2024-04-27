@@ -1,6 +1,6 @@
 //imports
-import { SaveCharacter, LoadCharacter, DeleteCharData } from "./service.js";
-import { BuildInitObject, BuildCards } from "./domain.js";
+import { SaveCharacter, LoadCharacter, DeleteCharData, SaveInitiative, LoadInitiative, ClearInitiative } from "./service.js";
+import { BuildInitObject, BuildCards, temparray } from "./domain.js";
 //element selectors
 const managerpage = document.getElementById("managerpage") !== null;
 const index = document.getElementById("index") !== null;
@@ -66,10 +66,34 @@ if (managerpage) {
 
 }
 if(tracker){
+    const container = document.getElementById("card-container");
+    const delet = document.getElementById("clearinitiative");
+    delet.addEventListener("click", (e) => {
+        e.preventDefault();
+        ClearInitiative();
+        container.replaceChildren();
+    })
+    var load = await LoadInitiative();
+    var temp;
+    console.log(load);
+    if(load !== null){
+        console.log(load);
+        for(var i = 0; i < load.length; i++) {
+            console.log(load[i]);
+            temp = BuildInitObject(load[i].name, load[i].init);
+            console.log(temp);
+            container.appendChild(BuildCards(temp));
+        }
+    }
     const form = document.getElementById("initform");
     const char = document.getElementById("charinput");
     const init = document.getElementById("initiative");
-    const container = document.getElementById("card-container");
+
+    const saveinit = document.getElementById("saveinitiative");
+    saveinit.addEventListener("click", () => {
+        console.log("is this working?")
+        SaveInitiative(temparray);
+    })
     var newinitobj;
     form.addEventListener("submit", (e) => {
         e.preventDefault();

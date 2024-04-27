@@ -1,11 +1,12 @@
 var initiativeArray = [];
-var temparray = [];
+export var temparray = [];
 export const BuildInitObject = (text, number) => {
     var temp = {
         name: text,
         init: number
     }
     initiativeArray.push(temp);
+    temparray = [...initiativeArray];
     return {
         name: text,
         init: number

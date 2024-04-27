@@ -54,10 +54,10 @@ a{
 .navbar a{
     color: var(--color-6);
 }
-#delete{
+.delete{
     color: var(--color-7);
     background-color:var(--color-8);
 }
 #managerpage{
-    margin:5em;
+    
 }
