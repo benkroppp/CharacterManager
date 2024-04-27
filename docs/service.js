@@ -22,5 +22,5 @@ export const LoadInitiative = async () => {
     return JSON.parse(localinit);
 }
 export const ClearInitiative = () => {
-    localStorage.setItem("initiative", "");
+    localStorage.setItem("initiative", null);
 }
