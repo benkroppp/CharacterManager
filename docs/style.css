@@ -63,11 +63,13 @@ a{
     color: var(--color-7);
     background-color:var(--color-8);
 }
-#managerpage{
+/* #managerpage{
     
-}
+} */
 .charactercard{
-    xpadding:5em;
+    background-color: var(--color-4);
+    color: var(--color-1);
+    width: 20em;
 }
 .img{
     border-color:var(--color-5);
@@ -81,4 +83,30 @@ a{
 }
 .spacer{
     margin: 3em;
+}
+.hidden{
+    display:none;
+}
+.links a{
+    color: var(--color-6);
+}
+@media only screen and (max-width: 768px) {
+    /* For mobile phones */
+    .form-section {
+        margin: 1em; /* Adjust spacing for smaller screens */
+    }
+    /* Add more adjustments as needed */
+}
+
+/* Additional breakpoints */
+@media only screen and (min-width: 600px) {
+    /* For tablets */
+    .col-s-1 { width: 8.33%; }
+    /* Add more tablet-specific styles */
+}
+
+/* Larger screens (desktop) */
+@media only screen and (min-width: 768px) {
+    .col-1 { width: 8.33%; }
+    /* Add more desktop-specific styles */
 }
