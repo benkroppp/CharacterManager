@@ -45,10 +45,9 @@ input, select{
     width: 100vw;
     text-align:center;
     padding:0.05em;
+    margin:0px;
 }
-a{
-    text-decoration: none;
-}
+
 .navbar{
     color:var(--color-6);
     background-color:var(--color-5);
@@ -56,9 +55,7 @@ a{
     justify-content: center;
     text-align: center;
 }
-.navbar a{
-    color: var(--color-6);
-}
+
 .delete{
     color: var(--color-7);
     background-color:var(--color-8);
@@ -87,8 +84,17 @@ a{
 .hidden{
     display:none;
 }
-.links a{
+.currentpage{
+    color:black;
+}
+a{
     color: var(--color-6);
+    text-decoration:none;
+    transition: color 0.5s;
+}
+a:hover{
+    color:var(--color-8);
+    transition: color 0.4s;
 }
 @media only screen and (max-width: 768px) {
     /* For mobile phones */
@@ -109,4 +115,16 @@ a{
 @media only screen and (min-width: 768px) {
     .col-1 { width: 8.33%; }
     /* Add more desktop-specific styles */
+}
+article {
+    padding:1em;
+}
+section :nth-child(odd){
+    background-color: var(--color-2);
+}
+#searchform{
+    justify-content: center;
+    align-items: center;
+    align-self:center;
+    text-align:center;
 }

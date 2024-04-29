@@ -1,11 +1,19 @@
 //imports
-import { SaveCharacter, LoadCharacter, DeleteCharData, SaveInitiative, LoadInitiative, ClearInitiative } from "./service.js";
+import { SaveCharacter, LoadCharacter, DeleteCharData, SaveInitiative, LoadInitiative, ClearInitiative, searchAPI } from "./service.js";
 import { BuildInitObject, BuildCards, temparray } from "./domain.js";
 //element selectors
+const indexlink = document.getElementById("indexlink");
+const charmanagerlink = document.getElementById("charmanagerlink");
+const initiativelink = document.getElementById("initiativelink");
+const aboutlink = document.getElementById("aboutlink");
+const searchlink = document.getElementById("searchlink");
 const managerpage = document.getElementById("managerpage") !== null;
 const index = document.getElementById("index") !== null;
-const tracker = document.getElementById("tracker");
+const tracker = document.getElementById("tracker") !==null;
+const about = document.getElementById("about") !==null;
+const search = document.getElementById("search") !==null;
 if (index) {
+    indexlink.classList.add("currentpage");
     const nameElement = document.getElementById("name");
     const classElement = document.getElementById("class");
     const raceElement = document.getElementById("race");
@@ -26,6 +34,7 @@ if (index) {
     })
 }
 if (managerpage) {
+    charmanagerlink.classList.add("currentpage");
     const deletechar = document.getElementById("delete");
     const nameload = document.getElementById("name-load");
     const classload = document.getElementById("class-load");
@@ -66,6 +75,7 @@ if (managerpage) {
 
 }
 if(tracker){
+    initiativelink.classList.add("currentpage");
     const container = document.getElementById("card-container");
     const delet = document.getElementById("clearinitiative");
     delet.addEventListener("click", (e) => {
@@ -102,6 +112,36 @@ if(tracker){
         
         container.appendChild(BuildCards(newinitobj));
     })
+}
+if(about)
+{
+    aboutlink.classList.add("currentpage");
+}
+if(search){
+    searchlink.classList.add("currentpage");
+    const form = document.getElementById("searchform");
+    const name = document.getElementById("name");
+    const index = document.getElementById("itemindex");
+    const desc = document.getElementById("desc");
+    const resetbutton = document.getElementById("reset");
+    const searchterm = document.getElementById("searchterm");
+    const category = document.getElementById("category");
+    form.addEventListener("submit", async (e) =>{
+        e.preventDefault();
+        var test = await searchAPI(category.value, searchterm.value);
+        console.log(test);
+        name.textContent = test.name;
+        index.textContent = test.index;
+        desc.textContent = test.desc;
+    })
+    resetbutton.addEventListener("click", () => {
+        reset();
+    })
+    function reset(){
+        name.textContent = "";
+        index.textContent = "";
+        desc.textContent = "";
+    }
 }
 console.log(managerpage);
 LoadCharacter();

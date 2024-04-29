@@ -24,3 +24,7 @@ export const LoadInitiative = async () => {
 export const ClearInitiative = () => {
     localStorage.setItem("initiative", null);
 }
+export const searchAPI = async (category, input) => {
+    const response = await fetch("https://www.dnd5eapi.co/api/"+category+"/"+input);
+    return await response.json();
+}

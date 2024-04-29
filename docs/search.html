@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Search the DND API</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="ui.js" type="module"></script>
+        <link rel="icon" href="diary.png" type="image/x-icon">
+    </head>
+<body>
+    <div id="search">
+        <div class="navbar">
+            <a href="index.html" id="indexlink">Create Your Character</a>|
+            <a href="charactermanager.html" id="charmanagerlink">Manage Your Character</a>|
+            <a href="initiativetracker.html" id="initiativelink">Track Combat Initiative</a>|
+            <a href="search.html" id="searchlink">Search</a>|
+            <a href="about.html" id="aboutlink">About</a>
+        </div>
+        <h1 class="header">Search the DND API</h1>
+        <div class="spacer">
+            <form id="searchform">
+            <h2>For simplicity, a single word works best when searching</h2>
+            <input type="text" name="searchterm" id="searchterm">
+            <select name="category" id="category">
+                <option value="classes">Classes</option>
+                <option value="features">Features</option>
+                <option value="monsters">Monsters</option>
+                <option value="spells">Spells</option>
+            </select>
+            <input type="reset" class="delete" id="reset">
+            <input type="submit" class="save" id="search" value="Search">
+        </form>
+        <div id="info-container">
+            <h1 id="name"></h1>
+            <p id="itemindex"></p>
+            <p id="desc"></p>
+        </div>
+    </div>
+    </div>
+</body>
+</html>
